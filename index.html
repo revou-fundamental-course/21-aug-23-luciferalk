@@ -3,61 +3,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="witdh=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-        <title>Website pantai</title>
+        <title>Website to SMK Beach</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
-        <header class="header-wrapper">
-            <div class="logo"><a href=""><img class= "img-logo" alt="revou-logo" src="logo.png"></a></div>
-            <div class="menu" >
-                <a href=""><button>Home</button></a>
-                <a href=""><button>Our Profile</button></a>
-                <a href=""><button>Achievement</button></a>
-                <a href=""><button>Message Us</button></a>
+        <header class="header-wrapper" id="home">
+            <div class="logo">
+                <a href="#home"><img class= "img-logo" alt="revou-logo" src="img/logo.png"></a>
             </div>
-    </header>
-    <main>
-        <h1>Welcome to the Beach</h1>
-        <div class="facilitation" onload="showDivs(1)">
-                <img class="img-slideshow" alt="revou-logo1" src="img1.jpeg" style="display: block;">
-                <img class="img-slideshow" alt="revou-logo2" src="img2.jpeg">
-                <img class="img-slideshow" alt="revou-logo3" src="img3.jpeg">
-                <img class="img-slideshow" alt="revou-logo3" src="img4.jpeg">
-        </div>
-        <div class="img-click">
-            <button onclick="plusDivs(-1)">&#10094;</button>
-            <button onclick="plusDivs(1)">&#10095;</button>
-        </div>
-        <footer>
+            <div class="menu" >
+                <a href="#home"><button>Home</button></a>
+                <a href="#profile"><button>Our Profile</button></a>
+                <a href="#achievement"><button>Achievement</button></a>
+                <a href="#message-us"><button>Message Us</button></a>
+            </div>
+        </header>
+
+        <main id="profile">
+            <form class="nama-form" name="nama-form" onsubmit="return namaForm()">
+                <h1><label id="nama-datang">Hi nama kamu siapa?<input placeholder="nama" name="nama-datang" type="text"><input type="submit" value="enter"></label></h1>
+            </form>
+            
+            <div class="facilitation" onload="showDivs(1)">
+                <img class="img-slideshow" alt="revou-logo1" src="img/img1.jpeg" style="display: block;">
+                <img class="img-slideshow" alt="revou-logo2" src="img/img2.jpeg">
+                <img class="img-slideshow" alt="revou-logo3" src="img/img3.jpeg">
+                <img class="img-slideshow" alt="revou-logo4" src="img/img4.jpeg">
+            </div>
+
+            <div class="img-click">
+                <button onclick="plusDivs(-1)">&#10094;</button>
+                <button onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+            <p>Kegiatan-kegiatan yang dilakukan di pantai</p>
+            
+            <div id="achievement" class="achievement">
+                <div>
+                    <img  class="img-kegiatan" src="img/img5.jpeg" alt="kegiatan-1">
+                    <p style="text-align: left;">Beach Volley ball</p>
+                </div>
+                <div>
+                    <img class="img-kegiatan" src="img/img6.jpeg" alt="kegiatan-2">
+                    <p style="text-align: left;">Surfing</p>
+                </div>
+            </div>
+        </main>
+
+        <footer id="message-us">
             <h2>Message Us</h2>
             <div class="form-section" >  
                 <div>
-                <form class="message-form" name="massage-form" onsubmit="return validationForm()">
-                    First name:<input placeholder="first Name" type="text" name="fName"><br>
-                    Last name:<input placeholder="last Name"type="text"  name="lName"><br>
-                    tanggal lahir:<input type="date" name="birth-date"><br>
-                    Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="Pria">
-                    <label for="male">Pria</label>
-                    <input type="radio" id="female" name="gender" value="Wanita">
-                    <label for="female">Wanita</label>
-                    <br>
-                    Pesan :
-                    <textarea placeholder="pesan" name="message"></textarea>
-                    <br>
-                    <input type="submit" value="submit" >
-                </form>
+                    <form class="message-form" name="massage-form" onsubmit="return validationForm()">
+                        First name:<input placeholder="first Name" type="text" name="fName"><br>
+                        Last name:<input placeholder="last Name"type="text"  name="lName"><br>
+                        tanggal lahir:<input type="date" name="birth-date"><br>
+                        Jenis Kelamin:
+                        <input type="radio" id="male" name="gender" value="Pria">
+                        <label for="male">Pria</label>
+                        <input type="radio" id="female" name="gender" value="Wanita">
+                        <label for="female">Wanita</label>
+                        <br>
+                        Pesan :
+                        <textarea placeholder="pesan" name="message"></textarea>
+                        <br>
+                        <input type="submit" value="submit" >
+                    </form>
                 </div>
+                
                 <div class ="message-output">
                     Current Time : <label id="datetime"></label><br>
                     Nama : <label id="name"></label><br>
                     Tanggal lahir : <label id="birth-date"></label><br>
-                    jenis kelamin : <label id="gender"></label><br>
-                    pesan :<label id="message"></label>
+                    Jenis kelamin : <label id="gender"></label><br>                        
+                    Pesan :<label id="message"></label>
                 </div>
             </div>
         </footer>
-    </main>
     </body>
 </html>

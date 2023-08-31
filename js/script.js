@@ -5,21 +5,27 @@ function plusDivs(n){
 }
 function showDivs(n){
     var i;
-    var x = document.getElementsByClassName("img-slideshow");
-    for(i = 0 ; i < x.length ; i++){
-        x[i].style.display ="none";
+    var imgslide = document.getElementsByClassName("img-slideshow");
+    for(i = 0 ; i < imgslide.length ; i++){
+        imgslide[i].style.display ="none";
     }
-    if (slideIndex > x.length){
+    if (slideIndex > imgslide.length){
         slideIndex = 1;
     } 
     else if( n < 1) {
-        slideIndex = x.length;
+        slideIndex = imgslide.length;
     }
-    x[slideIndex - 1].style.display ="block";
+    imgslide[slideIndex - 1].style.display ="block";
 }
 setInterval(function() {
     plusDivs(1)
-}, 5000);
+}, 2000);
+
+function namaForm(){
+    var fName = document.forms["nama-form"]["nama-datang"].value;
+    document.getElementById("nama-datang").innerHTML = "Hi "+ fName +" ,Welcome to SMK Beach";
+    return false;
+}
 
 function validationForm(){
     var fName = document.forms["massage-form"]["fName"].value;

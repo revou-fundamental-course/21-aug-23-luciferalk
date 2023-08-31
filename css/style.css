@@ -1,3 +1,8 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
 .header-wrapper{
     display: flex;
     justify-content: space-between;
@@ -5,44 +10,56 @@
     border-bottom: 2px solid black;
     padding: 16px 21px;
 }
+
 .img-logo{
     width: 100px;
 }
-h1{
-    display: flex;
-    justify-content: center;
-}
+
 .facilitation{
     display: flex;
     justify-content: center;
 }
+
 .img-slideshow{
     display: none;
     width: 100%;
     height: 500px;
 }
+
 .img-click{
     padding: 10px;
     display: flex;
     justify-content: center;
     border-bottom: 2px solid black;
 }
-h2{
-    display: flex;
-    justify-content: left;
+
+.achievement{
+    display: grid;
+    grid-template-columns : 50% 50%;
+    border-bottom: 2px solid black;
 }
+
+.img-kegiatan{
+    height: 250px;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+}
+
 .form-section{
     display:grid;
     grid-template-columns : 50% 50%;
     grid-gap: 10px;
     padding: 10px;
     height: 400px;
+    background-color: lightblue;
 }
+
 .form-section > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: left;
-    padding: 20px 0;
-    font-size: 20px;
+    padding: 20px 20px;
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 600px){
